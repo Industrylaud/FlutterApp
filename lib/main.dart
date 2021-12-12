@@ -16,14 +16,22 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.deepPurpleAccent,
       ),
-      body: Center(
-        child: IconButton(
-          onPressed: () {
-            print('you clicked me');
-          },
-          icon: Icon(Icons.alternate_email),
-          color: Colors.amber
-        )
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text('henlo world'),
+          FlatButton(
+            onPressed: () {  },
+            color: Colors.amber,
+            child: Text('click me'),
+          ),
+          Container(
+            color: Colors.cyan,
+            padding: EdgeInsets.all(30.0),
+            child: Text('inside container')
+          )
+        ]
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {  },
